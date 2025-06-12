@@ -1,6 +1,6 @@
 import "./estilos.css";
 
-export default function Exercicio1()
+export default function Exemplo1()
 {
     return (
         <div>
