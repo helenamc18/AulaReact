@@ -2,7 +2,7 @@ export default function Exercicio2(){
 
     return (
         <div>
-            <h2 style={{ color:"red", backgroundColor:"yellow",textAlign:"center",padding:"10px" }}>Exemplo de Estilos em linhas</h2>
+            <h2 style={{ color:"black", backgroundColor:"palevioletred",textAlign:"center",padding:"10px" }}>Exemplo de Estilos em linhas</h2>
 
            <p>
            <span className="destaque">Os estilos são aplicados diretamente

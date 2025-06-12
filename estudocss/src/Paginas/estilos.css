@@ -1,7 +1,7 @@
 .titulo
 {
-    color : purple;
-    background-color: cornflowerblue;
+    color : black;
+    background-color: greenyellow;
     text-align: center;
     padding: 10px;
 }
@@ -10,5 +10,5 @@
 {
     font-weight: bold;
     font-style: italic;
-    color : teal;
+    color : green;
 }
