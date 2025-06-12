@@ -9,7 +9,7 @@ export default function Exercicio1()
               <p><span className="destaque">They could describe everything with one single word</span></p>
               <p>You know, like</p>
               <p>Boba tea (gnarly)</p>
-              <p>Tesla (gnarly)</p>
+              <p>Robotics (gnarly)</p>
               <p>Fried chicken (gnarly)</p>
               <p>Partyin' in the Hollywood Hills (uh)</p>
               <p>This song (gnarly)</p>
