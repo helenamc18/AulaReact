@@ -1,50 +1,55 @@
-import {Link} from 'react-router-dom';
-import { useState } from "react";
-
-
-export default function Exemplo2()
-{
-    const [numero1, setNumero1] = useState(number);
-    const [numero2,setNumero2] = useState(number);
-
-    function calcular()
-    {
-        let number = Number(numero1) ;
-
-        setResultado("Olá " + nome + " você já viveu " + dias + " dias ");
-    }
-    function limpar()
-    {
-        setNome("");
-        setIdade("");
-        setResultado("");
-    }
+import {Link} from "react-router-dom";
+import {useState} from "react";
 
 export default function Exemplo2()
 {
-    return (
-        <div>
-            <h1>Exemplo 2</h1>
-            <form>
-                <p>
-                   Digite o numero 1: <br />
-                   <input type="text" value={num} onChange={ (e) => setNumero1(e.target.value )} />
-                   </p>
-                   <p>
-                   Digite o numero 2: <br />
-                   <input type="text"  value={num} onChange={ (e) => setNumero2(e.target.value )} />
-                   </p>
-                   <p>
-                   <input type="button" value="Exemplo 2" onClick={calcular}/>
-                   <input type="button" value="Voltar"  onClick={voltar} />
-                   </p>
-                   <b>Resultados: </b> <br/>
-                       Nome: {nome} <br/>
-                       Idade: {idade}
-                   <p>
-        
+  const [num1, setNum1] = useState(0);
+  const [num2, setNum2] = useState(0);
+  const [resultado, setResultado] = useState('');
+
+
+  function calcular() {
     
-            </form>
-        </div>
-    )
-    
+    setResultado(
+      <div>
+        A soma é {Number(num1) + Number(num2)} <br />
+        A subtração é {Number(num1) - Number(num2)} <br />
+        A multiplicação é {Number(num1) * Number(num2)} <br />
+        A divisão é { Number(num1) / Number(num2) } <br />
+        A exponenciação é {Number(num1) ** Number(num2)} <br />
+        O resto da divisão é { Number(num1) % Number(num2) }
+      </div>
+    );
+  }
+
+
+
+  return (
+    <div>
+      <h1>Exemplo 2</h1>
+
+      <div className="container">
+        <form onSubmit={e => e.preventDefault()}>
+          <p>
+            Digite o número 1: <br />
+            <input type="number" value={num1} onChange={e => setNum1(e.target.value)} />
+          </p>
+          <p>
+            Digite o número 2: <br />
+            <input type="number" value={num2} onChange={e => setNum2(e.target.value)} />
+          </p>
+          
+          <p>
+            <input type="button" value="Calcular" onClick={calcular} />
+          </p>
+        </form>
+        <p>
+          Resultado: {resultado}
+        </p>
+        <p>
+          <Link to="/">Voltar</Link>
+        </p>
+      </div>
+    </div>
+  )
+}
